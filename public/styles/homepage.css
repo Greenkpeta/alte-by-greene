@@ -11,6 +11,7 @@ body {
     color: #333;
     background-color: #FAF6F1;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Navigation */
@@ -25,6 +26,7 @@ body {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(15px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo a {
@@ -115,6 +117,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #333;
+}
+
 .learn-more-btn {
     background-color: transparent;
     color: #333;
@@ -124,6 +132,11 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #4A90E2;
+    color: white;
 }
 
 .hero-image {
@@ -139,7 +152,7 @@ body {
 /* About Section */
 .about {
     padding: 5rem 5%;
-    background-color: white;
+    background-color: #F6E9D8;
 }
 
 .about h2 {
@@ -223,6 +236,12 @@ body {
     font-weight: 600;
 }
 
+.apply-brand-btn:hover {
+    background-color: transparent;
+    color: #FAF6F1;
+    border: 1px solid #333;
+}
+
 /* Newsletter Section */
 .newsletter {
     padding: 5rem 5%;
@@ -277,7 +296,8 @@ footer {
     color: #4B5563;
     padding: 5rem 5% 2rem;
 }
-footer h3{
+
+footer h3 {
     color: #000000;
 }
 
@@ -303,17 +323,36 @@ footer h3{
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .social-icon {
-    color: #4B5563;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .social-icon:hover {
-    color: #4A90E2;
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.instagram, .twitter, .pintrest, .linkedin {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .footer-links {
@@ -422,5 +461,36 @@ footer .link-column h3 {
     .legal-links {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icon img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 0.8rem;
+    }
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-icon img {
+        width: 16px;
+        height: 16px;
     }
 }

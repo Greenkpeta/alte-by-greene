@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alte by Greene - Discover Emerging Designers</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/homepage.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./script/script.js"></script>
     <nav class="navbar">
         <div class="logo">
             <img alt="Alte by Greene" src="./images/Logo.png">
         </div>
         <div class="nav-links">
-            <a href="#home">Home</a>
+            <a href="#hero">Home</a>
             <a href="#about">About</a>
-            <a href="#brands">Brands</a>
-            <a href="#community">Community</a>
-            <a href="#contact">Contact</a>
+            <a href="#brand-cta">Brands</a>
+            <a href="#newsletter">Community</a>
+            <a href="#footer">Contact</a>
         </div> 
         <div class="nav-right">
             <a class="search-icon" href=""><img src="./images/search.png" alt="Search"></a>
-            <a class="user-icon" href=""><img src="./images/user-logo.png" alt="User Logo"></a>
-            <button class="join-now-btn">Join Now</button>
+            <a class="user-icon" href=""><img src="./images/user.png" alt="User Logo"></a>
+            <button class="join-now-btn" onclick="window.location.href='shopperSignup.html'">Join Now</button>
         </div>
     </nav>
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Discover Emerging Designers</h1>
             <p>Shop unique fashion from independent brands</p>
@@ -41,7 +41,7 @@
             <img src="images/hero-image.png" alt="Fashion model">
         </div>
     </section>
-    <section class="about">
+    <section id="about" class="about" id="about">
         <h2>About Alte by Greene</h2>
         <div class="about-content">
             <p>Alte by Greene is a fresh, forward-thinking space where small brands get the spotlight they deserve. We're all about giving up-and-coming creatives a place to share their products, styles, and ideas with the world. Whether it's fashion, design, or something totally new, we celebrate originality and help connect authentic brands with curious minds.</p>
@@ -50,12 +50,12 @@
             <p>We're building a community-driven ecosystem where creative entrepreneurs can thrive — and we're just getting started.</p>
         </div>
     </section>
-    <section class="mission">
+    <section class="mission" id="mission">
         <h2>Our Mission</h2>
         <p class="mission-text">To empower emerging brands by giving them the tools and visibility they need to grow in today's fast-paced creative landscape.</p>
         <button class="join-community-btn">Join Our Community</button>
     </section>
-    <section class="brand-cta">
+    <section class="brand-cta" id="brand-cta">
         <h2>Got something unique to share?</h2>
         <p>Join us and let your brand speak for itself. Apply to become a featured brand on Alte by Greene.</p>
         <div class="cta-buttons">
@@ -63,7 +63,7 @@
             <button class="learn-more-btn">Learn More</button>
         </div>
     </section>
-    <section class="newsletter">
+    <section class="newsletter" id="newsletter">
         <h2>Stay in the Loop</h2>
         <p>Subscribe to our newsletter for the latest brand launches, exclusive offers, and community updates.</p>
         <form class="newsletter-form">
@@ -72,16 +72,24 @@
         </form>
         <p class="privacy-note">By subscribing, you agree to our Privacy Policy and consent to receive updates from Alte by Greene.</p>
     </section>
-    <footer>
+    <footer id="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="images/logo.png" alt="Alte by Greene">
                 <p>A curated marketplace for emerging designers and independent brands.</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Twitter</a>
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <img src="./images/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <img src="./images/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Pinterest">
+                        <img src="./images/pintrest.png" alt="Pinterest">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <img src="./images/linkedin.png" alt="LinkedIn">
+                    </a>
                 </div>
             </div>
             <div class="footer-links">
