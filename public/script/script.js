@@ -1,3 +1,4 @@
+const Server_Url = 'http://localhost:3000’;
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
