@@ -1,6 +1,7 @@
 /* Reset and base styles */
 * {
     margin: 0;
+    
     padding: 0;
     box-sizing: border-box;
 }
@@ -30,7 +31,7 @@ body {
 }
 
 .logo a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #333;
     text-decoration: none;
@@ -58,6 +59,7 @@ body {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
+    margin-right: 20px;
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease;
@@ -89,15 +91,15 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     color: #666;
 }
 
@@ -156,8 +158,8 @@ button:hover {
 }
 
 .about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
@@ -167,8 +169,9 @@ button:hover {
 }
 
 .about-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: #666;
+    font-size: 0.95rem;
 }
 
 /* Mission Section */
@@ -179,14 +182,14 @@ button:hover {
 }
 
 .mission h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .mission-text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     max-width: 800px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.75rem;
     font-style: italic;
     color: #666;
 }
@@ -211,13 +214,14 @@ button:hover {
 }
 
 .brand-cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .brand-cta p {
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
     color: #CCC;
+    font-size: 0.95rem;
 }
 
 .cta-buttons {
@@ -250,13 +254,14 @@ button:hover {
 }
 
 .newsletter h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .newsletter p {
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
     color: #666;
+    font-size: 0.95rem;
 }
 
 .newsletter-form {
@@ -268,10 +273,10 @@ button:hover {
 
 .newsletter-form input {
     flex: 1;
-    padding: 1rem;
+    padding: 0.875rem;
     border: 1px solid #CCC;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .newsletter-form button {
@@ -285,9 +290,9 @@ button:hover {
 }
 
 .privacy-note {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #666;
-    margin-top: 1rem;
+    margin-top: 0.875rem;
 }
 
 /* Footer */
@@ -363,16 +368,17 @@ footer h3 {
 
 .link-column h3 {
     color: white;
-    margin-bottom: 1.5rem;
-    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
 }
 
 .link-column a {
     display: block;
     color: #4B5563;
     text-decoration: none;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.625rem;
     transition: color 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .link-column a:hover {
@@ -404,7 +410,7 @@ footer h3 {
 .legal-links a {
     color: #4B5563;
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     transition: color 0.3s ease;
 }
 
@@ -426,6 +432,7 @@ footer .link-column h3 {
 
     .hero-buttons {
         justify-content: center;
+        
     }
 
     .footer-content {
@@ -445,7 +452,7 @@ footer .link-column h3 {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .newsletter-form {
