@@ -1,13 +1,12 @@
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
-require('dotenv').config(); // Load .env file
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // to parse JSON bodies
+app.use(express.json());
 
-// Initialize Firebase Admin
 admin.initializeApp({
   credential: admin.credential.cert({
     type: process.env.FIREBASE_TYPE,
@@ -25,28 +24,36 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-// Create User Endpoint
-app.post('/create-user', async (req, res) => {
+// New signup route
+app.post('/api/signup', async (req, res) => {
   try {
-    const { uid, name, email } = req.body;
-    if (!uid || !name || !email) {
-      return res.status(400).json({ message: 'Missing fields: uid, name, or email' });
+    const { fullName, email, password } = req.body;
+
+    if (!fullName || !email || !password) {
+      return res.status(400).json({ message: 'Missing fields: fullName, email, or password' });
     }
 
-    await db.collection('users').doc(uid).set({
-      name,
+    // Auto-generate a UID
+    const userRef = db.collection('users').doc();
+    await userRef.set({
+      fullName,
       email,
+      password, // normally you should hash password!
       createdAt: admin.firestore.FieldValue.serverTimestamp()
     });
 
-    res.status(201).json({ message: 'User created successfully' });
+    res.status(201).json({ 
+      message: 'Signup successful', 
+      userId: userRef.id, 
+      fullName, 
+      email 
+    });
   } catch (error) {
-    console.error('Error creating user:', error);
+    console.error('Signup error:', error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
 });
 
-// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Wallet server running on port ${PORT}`);
