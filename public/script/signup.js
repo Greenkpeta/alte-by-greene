@@ -1,3 +1,4 @@
+const Server_Url = 'https://alte-server-35py.onrender.com’;
 //switch form between shopper and brand 
 window.switchForm = function(type) {
     const shopperOption = document.querySelector('.account-option.shopper');
@@ -336,9 +337,10 @@ function validateForm(formData) {
     return true;
 }
 
+
 async function submitForm(formData) {
     try {
-        const response = await fetch('/api/signup', {  // awaiting api endpoint
+        const response = await fetch(`${Server_Url}/api/signup`, {  // full server URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
