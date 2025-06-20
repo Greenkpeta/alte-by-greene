@@ -2,15 +2,30 @@ const { redirect } = require("express/lib/response.js");
 const { User, ShopperUser, userLogIn } = require("../models/User.js");
 
 // Create user for shopper
+// controllers/usercontroller.js
 exports.createUser = async (req, res) => {
   try {
-    const { fullName, phoneNumber, password } = req.body;
-    const newUser = User.create({ fullName, phoneNumber, password });
+    const { fullName, email, password } = req.body;
+
+    // You can also add simple validation
+    if (!fullName || !email || !password) {
+      return res.status(400).render("signup", {
+        errorMessage: "All fields are required.",
+      });
+    }
+
+    const newUser = new User({ fullName, email, password });
     await newUser.save();
-    return res.status(201).json({ user: "New user created successfully" });
-  } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.redirect("/");
+  } catch (err) {
+    return res.status(500).render("signup", {
+      errorMessage: err.message || "Internal Server Error",
+    });
   }
+};
+
+exports.userCreate = async (req, res) => {
+  res.render("signup", { errorMessage: null });
 };
 
 // Get all users

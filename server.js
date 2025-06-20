@@ -1,7 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const router = require("./routes/routers.js");
-const public_router = require("./routes/public_router.js");
 const connectDB = require("./config/db.js");
 const path = require("path");
 
@@ -10,6 +9,7 @@ connectDB();
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON
+app.use(express.urlencoded({ extended: true }));
 
 // Set the view engine to ejs
 app.set("view engine", "ejs");
@@ -20,9 +20,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
-app.use("/api", router);
-
-app.use("/", public_router);
+app.use("/", router);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

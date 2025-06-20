@@ -1,0 +1,503 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FAF6F1;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4A90E2;
+}
+
+.join-now-btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.join-now-btn:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #333;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5% 5%;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.discover-btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #333;
+}
+
+.learn-more-btn {
+    background-color: transparent;
+    color: #333;
+    padding: 1rem 2rem;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 5%;
+    background-color: #F6E9D8;
+}
+
+.about h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    margin-bottom: 1.25rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Mission Section */
+.mission {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: #FAF6F1;
+}
+
+.mission h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1.75rem;
+    font-style: italic;
+    color: #666;
+}
+
+.join-community-btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Brand CTA Section */
+.brand-cta {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: #111827;
+    color: white;
+}
+
+.brand-cta h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.brand-cta p {
+    margin-bottom: 1.75rem;
+    color: #CCC;
+    font-size: 0.95rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.apply-brand-btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.apply-brand-btn:hover {
+    background-color: transparent;
+    color: #FAF6F1;
+    border: 1px solid #333;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: #F6E9D8;
+}
+
+.newsletter h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.newsletter p {
+    margin-bottom: 1.75rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.875rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.newsletter-form button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.privacy-note {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.875rem;
+}
+
+/* Footer */
+footer {
+    background-color: #F6E9D8;
+    color: #4B5563;
+    padding: 5rem 5% 2rem;
+}
+
+footer h3 {
+    color: #000000;
+}
+
+.footer-content {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    flex: 2;
+}
+
+.footer-logo img {
+    margin-bottom: 1rem;
+    height: 40px;
+}
+
+.footer-logo p {
+    color: #4B5563;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.instagram, .twitter, .pintrest, .linkedin {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-links {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-column h3 {
+    color: white;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.link-column a {
+    display: block;
+    color: #4B5563;
+    text-decoration: none;
+    margin-bottom: 0.625rem;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.link-column a:hover {
+    color: #4A90E2;
+}
+
+.link-column p {
+    color: #4B5563;
+    margin-bottom: 0.75rem;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: #4B5563;
+}
+
+.legal-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.legal-links a {
+    color: #4B5563;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #4A90E2;
+}
+
+footer .link-column h3 {
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icon img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 0.8rem;
+    }
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-icon img {
+        width: 16px;
+        height: 16px;
+    }
+}
