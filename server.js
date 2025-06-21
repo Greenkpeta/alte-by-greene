@@ -2,15 +2,25 @@ const express = require("express");
 const dotenv = require("dotenv");
 const router = require("./routes/routers.js");
 const connectDB = require("./config/db.js");
+const path = require("path");
 
 dotenv.config();
 connectDB();
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON
+app.use(express.urlencoded({ extended: true }));
+
+// Set the view engine to ejs
+app.set("view engine", "ejs");
+
+// Set the views directory (optional if using default "views")
+app.set("views", path.join(__dirname, "views"));
+// serve static files
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
-app.use("/api", router);
+app.use("/", router);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

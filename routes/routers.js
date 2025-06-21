@@ -3,12 +3,20 @@ const {
   createUser,
   getUsers,
   createShopperUser,
+  homePage,
+  userCreate,
 } = require("../controllers/usercontroller.js");
-const router = express.Router();
+const { HomePage } = require("../controllers/public_controller");
 
-router.post("/accounts/user", createUser);
-router.get("/accounts/profile", getUsers);
+const app = express();
 
-router.post("/accounts/shopper-user", createShopperUser);
+app.get("/accounts/profile", getUsers);
 
-module.exports = router;
+app.post("/accounts/shopper-user", createShopperUser);
+
+app.post("/signup", createUser);
+app.get("/signup", userCreate);
+
+app.get("/", HomePage);
+
+module.exports = app;
